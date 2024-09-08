@@ -1,4 +1,5 @@
 col_values = []
+new_col_values = []
 matrix = [[], [], []]
 
 def get_col_values():
@@ -14,6 +15,8 @@ def get_matrix_values():
 
 def replace_col_one_values():
   for i in range(3):
+    aux = matrix[i][1]
+    new_col_values.append(aux)
     matrix[i][1] = col_values[i]
 
 def get_prettier_matrix(matrix):
@@ -35,6 +38,7 @@ get_prettier_matrix(matrix)
 
 replace_col_one_values()
 
-print(f"\nA matriz final com os valores substituidos: ")
+print(f"\nVetor final substituito: {new_col_values}")
 
+print(f"\nA matriz final com os valores substituidos: ")
 get_prettier_matrix(matrix)
